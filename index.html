@@ -9,14 +9,14 @@
 </head>
 <body>
 
-<!-- Menú de navegación -->
+
     <nav class="custom-navbar">
         <div class="nav-container">
-            <!-- Firma a la izquierda -->
+
              
             <a href="index.html" class="navbar-logo"><i class="bi bi-bus-front" class=""></i> LyT M.D.O</a>
             
-            <!-- Lista de enlaces centrados -->
+
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#cotizacion">Cotización</a></li>
@@ -27,28 +27,31 @@
         </div>
     </nav>
 
-    <!-- Botón Flotante de WhatsApp -->
+
     <a href="https://wa.me/56958281260" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-whatsapp"></i>
     </a>
 
-    <!-- NUEVO: TÍTULO Y ESLOGAN -->
-    <section id="hero" class="title-container">
-        <div class="title-box">
-            <h1>Logística y transporte Montes de Oca</h1>
-            <p>Tu carga en buenas manos, con el compromiso y la seguridad de siempre.</p>
-        </div>
-    </section>
+    
+    <section class="hero-section">
+    <div class="hero-card">
+        <h1>Logística y transporte Montes de Oca</h1>
+        <p>Tu carga en buenas manos, con el compromiso y la seguridad de siempre.</p>
+    </div>
+    <div class="hero-image-wrapper">
+        <img src="foto1.png" alt="Ivan Montes de Oca - Fundador 1940" class="sepia-portrait">
+    </div>
+</section>
 
-<!-- SECCIÓN DEL FORMULARIO COTIZADOR -->
+
     <section id="cotizacion">
         <h2>Calcula tu Presupuesto</h2>
         
-        <!-- Aviso Visual (Oculto por defecto) -->
+        
         <p id="alerta-ciudades" class="alerta-roja ocultar-alerta">No se puede escoger dos ciudades iguales de inicio y término de encomienda.</p>
         
         <form id="cotizar-form">
-            <!-- NUEVOS CAMPOS: Nombre y WhatsApp -->
+           
             <div class="form-group-row">
                 <div class="form-group half-width">
                     <label for="nombre">Nombre y Apellido:</label>
@@ -60,7 +63,7 @@
                 </div>
             </div>
 
-            <!-- CAMPOS: Ciudades -->
+           
             <div class="form-group-row">
                 <div class="form-group half-width">
                     <label for="origen">Ciudad de Origen:</label>
@@ -84,13 +87,13 @@
                 </div>
             </div>
 
-            <!-- CAMPO: Peso -->
+
             <div class="form-group">
                 <label for="peso">Peso estimado de la carga (kg):</label>
                 <input type="number" id="peso" name="peso" min="1" required>
             </div>
 
-            <!-- NUEVO CAMPO: Frágil -->
+
             <div class="form-group">
                 <label>¿El producto es frágil?</label>
                 <div class="radio-group">
@@ -102,7 +105,7 @@
             <button type="submit" id="btn-calcular" class="btn-submit">Calcular Presupuesto</button>
         </form>
 
-        <!-- Contenedor del resultado (Oculto por defecto) -->
+
         <div id="resultado" class="resultado-caja d-none">
             <h3>Total Estimado: <span id="precio" class="text-primary-apple"></span></h3>
             <p>Este es un valor referencial. Contáctanos por WhatsApp para coordinar tu envío.</p>

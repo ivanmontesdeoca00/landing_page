@@ -1,120 +1,127 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RutaExpress - Encomiendas, viajes y demas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Logística y Transporte Montes de Oca</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
-        <div class="container">
-            <a class="navbar-brand logo-apple" href="#">RutaExpress</a>
+<!-- Menú de navegación -->
+    <nav class="custom-navbar">
+        <div class="nav-container">
+            <!-- Firma a la izquierda -->
+             
+            <a href="index.html" class="navbar-logo"><i class="bi bi-bus-front" class=""></i> LyT M.D.O</a>
             
-            <button id="theme-toggle" class="btn-theme-toggle">Oscuro</button>
-            
-            <div class="navbar-nav ms-auto d-none d-lg-flex">
-                <a class="nav-link" href="#tracking">Rastrear</a>
-                <a class="nav-link" href="#como-funciona">Cómo Funciona</a>
-                <a class="nav-link" href="otras_rutas.html">Cotizar</a>
-                <a href="#contacto" class="btn btn-apple-nav">Contactar</a>
-            </div>
+            <!-- Lista de enlaces centrados -->
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#cotizacion">Cotización</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="experiencia.html">Nosotros</a></li>
+                <li><button id="theme-toggle" class="btn-theme-toggle" title="Cambiar tema"><i id="theme-icon" class="bi bi-moon"></i></button></li>
+            </ul>
         </div>
     </nav>
 
-    <section class="hero-section text-center d-flex align-items-center">
-        <div class="container">
-            <h1 class="hero-title">Tu encomienda viaja<br>en el próximo micro</h1>
-            <p class="hero-subtitle mx-auto my-4">Envíos rápidos, seguros y económicos directo de terminal a terminal.</p>
-            <a href="otras_rutas.html" class="btn btn-apple-primary btn-lg px-4">Cotizar Envío</a>
-        </div>
-    </section>
-
-    <section id="tracking" class="section-padding section-alt">
-        <div class="container text-center">
-            <h2 class="section-title mb-4">Seguimiento en tiempo real</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card card-apple p-4">
-                        <form id="tracking-form">
-                            <div class="input-group">
-                                <input type="text" id="tracking-input" class="form-control form-control-apple" placeholder="Ej: ABC123" required>
-                                <button type="submit" class="btn btn-apple-primary">Buscar</button>
-                            </div>
-                        </form>
-                        <div id="tracking-result" class="text-start mt-3 pt-3 border-top d-none">
-                            <p class="mb-1 text-primary-apple fw-bold">En viaje </p>
-                            <p class="mb-0 text-muted small">Colectivo Nº45 - En camino</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="como-funciona" class="section-padding">
-        <div class="container">
-            <h2 class="text-center section-title mb-5">Cómo funciona el servicio</h2>
-            <div class="row g-4 text-center">
-                <div class="col-md-4">
-                    <div class="card card-apple h-100 p-4 border-0">
-                        <img src="despacho.webp" alt="Despachar paquete" class="img-fluid mb-3 rounded">
-                        <h3 class="h5 fw-bold">Despachás</h3>
-                        <p class="text-muted small">Dejás tu paquete en la terminal de origen antes de que salga el micro.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-apple h-100 p-4 border-0">
-                        <img src="viaje.webp" alt="Viaje del paquete" class="img-fluid mb-3 rounded">
-                        <h3 class="h5 fw-bold">Viaja</h3>
-                        <p class="text-muted small">El paquete viaja cerrado y seguro en las bodegas del ómnibus.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-apple h-100 p-4 border-0">
-                        <img src="entrega.webp" alt="Retirar paquete" class="img-fluid mb-3 rounded">
-                        <h3 class="h5 fw-bold">Retiran</h3>
-                        <p class="text-muted small">El destinatario lo busca directamente por la terminal de llegada.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="section-padding section-alt">
-        <div class="container">
-            <h2 class="text-center section-title mb-4">Cotizá tu envío</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card card-apple p-4">
-                        <form id="contact-form">
-                            <div class="mb-3">
-                                <label class="form-label">Nombre completo</label>
-                                <input type="text" class="form-control form-control-apple" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">WhatsApp</label>
-                                <input type="tel" class="form-control form-control-apple" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Detalles del paquete</label>
-                                <textarea class="form-control form-control-apple" rows="3" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-apple-primary w-100">Enviar Solicitud</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <a href="wa.me/+56958281260" class="whatsapp-floating" target="_blank">
-        <span>WhatsApp</span>
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/56958281260" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-whatsapp"></i>
     </a>
 
-    <script src="script.js"></script>
+    <!-- NUEVO: TÍTULO Y ESLOGAN -->
+    <section id="hero" class="title-container">
+        <div class="title-box">
+            <h1>Logística y transporte Montes de Oca</h1>
+            <p>Tu carga en buenas manos, con el compromiso y la seguridad de siempre.</p>
+        </div>
+    </section>
+
+<!-- SECCIÓN DEL FORMULARIO COTIZADOR -->
+    <section id="cotizacion">
+        <h2>Calcula tu Presupuesto</h2>
+        
+        <!-- Aviso Visual (Oculto por defecto) -->
+        <p id="alerta-ciudades" class="alerta-roja ocultar-alerta">No se puede escoger dos ciudades iguales de inicio y término de encomienda.</p>
+        
+        <form id="cotizar-form">
+            <!-- NUEVOS CAMPOS: Nombre y WhatsApp -->
+            <div class="form-group-row">
+                <div class="form-group half-width">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group half-width">
+                    <label for="whatsapp">Tu WhatsApp (Solo números):</label>
+                    <input type="number" id="whatsapp" name="whatsapp" required>
+                </div>
+            </div>
+
+            <!-- CAMPOS: Ciudades -->
+            <div class="form-group-row">
+                <div class="form-group half-width">
+                    <label for="origen">Ciudad de Origen:</label>
+                    <select id="origen" name="origen" required>
+                        <option value="" disabled selected>Selecciona origen</option>
+                        <option value="Iquique">Iquique</option>
+                        <option value="Antofagasta">Antofagasta</option>
+                        <option value="Santiago">Santiago</option>
+                        <option value="Concepción">Concepción</option>
+                    </select>
+                </div>
+                <div class="form-group half-width">
+                    <label for="destino">Ciudad de Destino:</label>
+                    <select id="destino" name="destino" required>
+                        <option value="" disabled selected>Selecciona destino</option>
+                        <option value="Iquique">Iquique</option>
+                        <option value="Antofagasta">Antofagasta</option>
+                        <option value="Santiago">Santiago</option>
+                        <option value="Concepción">Concepción</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- CAMPO: Peso -->
+            <div class="form-group">
+                <label for="peso">Peso estimado de la carga (kg):</label>
+                <input type="number" id="peso" name="peso" min="1" required>
+            </div>
+
+            <!-- NUEVO CAMPO: Frágil -->
+            <div class="form-group">
+                <label>¿El producto es frágil?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="fragil" value="Si" required> Sí</label>
+                    <label><input type="radio" name="fragil" value="No" checked> No</label>
+                </div>
+            </div>
+
+            <button type="submit" id="btn-calcular" class="btn-submit">Calcular Presupuesto</button>
+        </form>
+
+        <!-- Contenedor del resultado (Oculto por defecto) -->
+        <div id="resultado" class="resultado-caja d-none">
+            <h3>Total Estimado: <span id="precio" class="text-primary-apple"></span></h3>
+            <p>Este es un valor referencial. Contáctanos por WhatsApp para coordinar tu envío.</p>
+        </div>
+    </section>
+
+
+    <section id="ubicacion">
+        <h2>Ubicación</h2>
+        <p>Encuéntranos en nuestras oficinas centrales:</p>
+        
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.136192873491!2d-70.134595!3d-20.245842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915214002fa8c109%3A0xc3f58a361efbf7!2sManuel%20Castro%20Ramos%202100%2C%201100000%20Iquique%2C%20Tarapac%C3%A1%2C%20Chile!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+
+    <script src="main.js"></script>
+    <script src="cotizador.js"></script> 
 </body>
 </html>

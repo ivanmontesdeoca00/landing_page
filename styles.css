@@ -41,7 +41,7 @@ body {
 }
 
 /* NAVBAR */
-.custom-navbar, nav {
+.custom-navbar {
     background-color: var(--apple-nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -60,7 +60,7 @@ body {
     padding: 0 20px;
 }
 
-.logo-apple, .navbar-logo {
+.navbar-logo {
     font-weight: 800;
     font-size: 1.5rem;
     color: var(--apple-text) !important;
@@ -68,7 +68,7 @@ body {
     text-decoration: none;
 }
 
-.custom-navbar ul, nav ul {
+.custom-navbar ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,14 +79,14 @@ body {
     font-size: 1.1rem;
 }
 
-nav ul li a, .custom-navbar ul li a {
+.custom-navbar ul li a {
     text-decoration: none;
     color: var(--apple-text-secondary);
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
-nav ul li a:hover, .custom-navbar ul li a:hover {
+.custom-navbar ul li a:hover {
     color: var(--apple-text);
 }
 
@@ -103,7 +103,7 @@ nav ul li a:hover, .custom-navbar ul li a:hover {
     transform: scale(1.1);
 }
 
-/* ESTRUCTURA DE SECCIONES GENERALES */
+/* SECCIONES Y TÍTULOS */
 section {
     padding: 60px 20px;
     max-width: 1000px;
@@ -119,7 +119,7 @@ h2 {
 }
 
 /* =========================================
-   SECCIÓN PRINCIPAL (HERO) CON FOTO SEPIA Y TÍTULO
+   SECCIÓN PRINCIPAL (HERO) CON FOTO SEPIA
    ========================================= */
 .hero-section {
     display: flex;
@@ -131,7 +131,6 @@ h2 {
     margin: 0 auto;
 }
 
-/* Recuadro del Título con borde difuminado (Izquierda) */
 .title-box {
     text-align: left;
     padding: 40px;
@@ -159,7 +158,6 @@ h2 {
     line-height: 1.5;
 }
 
-/* Contenedor de la Imagen 1:1 en Sepia (Derecha) */
 .hero-image-wrapper {
     flex: 1;
     display: flex;
@@ -184,15 +182,7 @@ h2 {
     transform: scale(1.02);
 }
 
-/* Compatibilidad si usas clase .title-container externa */
-.title-container {
-    display: flex;
-    justify-content: center;
-    padding: 60px 20px 20px;
-}
-
-
-/* FORMULARIO ADAPTADO AL ESTILO APPLE */
+/* FORMULARIO Y COTIZADOR */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -227,25 +217,17 @@ h2 {
     box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
 }
 
-.radio-group {
-    display: flex;
-    gap: 20px;
-    color: var(--apple-text);
-    padding: 0.5rem 0;
-}
-
-/* Estructura para que Origen y Destino estén uno al lado del otro en PC */
 .form-group-row {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
 }
+
 .half-width {
     flex: 1;
     min-width: 200px;
 }
 
-/* BOTÓN ENVIAR FORMULARIO */
 .btn-submit {
     background-color: var(--apple-primary);
     color: #ffffff;
@@ -265,7 +247,6 @@ h2 {
     transform: translateY(-2px);
 }
 
-/* AVISO ROJO PERMANENTE */
 .alerta-roja {
     color: #ff3b30;
     font-weight: 600;
@@ -277,7 +258,6 @@ h2 {
     margin-bottom: 24px;
 }
 
-/* VALIDACIONES VISUALES (Errores) */
 .mensaje-error {
     color: #ff3b30; 
     font-size: 0.85rem;
@@ -296,7 +276,7 @@ h2 {
     outline: none; 
 }
 
-/* ESTILOS PARA EL MAPA Y COTIZADOR */
+/* MAPA */
 .map-container {
     width: 100%;
     height: 400px;
@@ -314,7 +294,6 @@ h2 {
     border: none;
 }
 
-/* Caja de resultado de cotización */
 .resultado-caja {
     margin-top: 25px;
     padding: 25px;
@@ -326,40 +305,7 @@ h2 {
     transition: opacity 0.3s ease;
 }
 
-.resultado-caja h3 {
-    margin: 0 0 10px 0;
-    color: var(--apple-text);
-}
-
-.resultado-caja p {
-    margin: 0;
-    color: var(--apple-text-secondary);
-    font-size: 0.95rem;
-}
-
-/* RESEÑAS GOOGLE */
-#google-reviews {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.resena-card {
-    background-color: var(--apple-card-bg);
-    border: 1px solid var(--apple-card-border);
-    padding: 20px;
-    border-radius: 18px;
-    box-shadow: var(--apple-shadow);
-    color: var(--apple-text);
-    transition: transform 0.2s;
-}
-
-.resena-card:hover {
-    transform: translateY(-4px);
-}
-
-/* PÁGINA: EXPERIENCIA.HTML */
+/* PÁGINA EXPERIENCIA */
 .experiencia-header {
     text-align: center;
     padding: 60px 20px 20px;
@@ -422,7 +368,21 @@ h2 {
     line-height: 1.5;
 }
 
-/* BOTÓN FLOTANTE WHATSAPP */
+/* =========================================
+   FOOTER CLÁSICO UNIFICADO
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid var(--apple-card-border);
+    background-color: var(--apple-tint);
+    color: var(--apple-text-secondary);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    margin-top: 40px;
+}
+
+/* WHATSAPP */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -448,14 +408,11 @@ h2 {
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
 }
 
-/* UTILIDADES DE VISIBILIDAD */
 .ocultar-alerta, .d-none {
     display: none !important;
 }
 
-/* =========================================
-   DISEÑO RESPONSIVO (MEDIA QUERIES)
-   ========================================= */
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .hero-section {
         flex-direction: column;
@@ -463,34 +420,28 @@ h2 {
         padding: 40px 20px;
         gap: 30px;
     }
-
     .title-box {
         text-align: center;
     }
-
     .sepia-portrait {
         max-width: 360px;
     }
 }
 
 @media (max-width: 768px) {
-    .custom-navbar .nav-container, nav {
+    .custom-navbar .nav-container {
         padding: 0.8rem 15px;
     }
-
-    .custom-navbar ul, nav ul {
+    .custom-navbar ul {
         gap: 10px;
         font-size: 0.95rem;
     }
-
     .title-box {
         padding: 25px 20px;
     }
-
     .title-box h1 {
         font-size: 1.8rem;
     }
-
     .sepia-portrait {
         max-width: 100%;
     }
